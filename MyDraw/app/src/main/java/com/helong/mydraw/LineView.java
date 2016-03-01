@@ -105,6 +105,8 @@ public class LineView extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 
+        if(distance == 0) return;
+
         /**
          *绘制纵横向背景线
          */
