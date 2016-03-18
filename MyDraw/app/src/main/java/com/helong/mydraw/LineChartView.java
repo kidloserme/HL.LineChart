@@ -69,8 +69,8 @@ public class LineChartView extends LinearLayout {
             lineParameters.setyAxesMaxValue(10);
             return;
         }
-
-        lineParameters.setyAxesMaxValue(((int) (maxValue / 50) + 1) * 50);
+        double ceil=Math.pow(10,String.valueOf((int)maxValue).length()-1);
+        lineParameters.setyAxesMaxValue(((int) (maxValue / ceil + 0.5f) + 1) * ceil);
     }
 
     public LineChartView(Context context) {
